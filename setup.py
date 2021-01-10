@@ -5,14 +5,14 @@ Author: Dr. John T. Hwang <hwangjt@umich.edu>
 
 This package is distributed under New BSD license.
 """
+if sys.platform == 'darwin':
+    os.environ['MACOSX_DEPLOYMENT_TARGET'] = '10.9'
+
 from setuptools import setup, Extension
 import os
 import sys
 from subprocess import call
 from smt import __version__
-
-if sys.platform == 'darwin':
-    os.environ['MACOSX_DEPLOYMENT_TARGET'] = '10.9'
 
 CLASSIFIERS = """\
 Development Status :: 5 - Production/Stable
